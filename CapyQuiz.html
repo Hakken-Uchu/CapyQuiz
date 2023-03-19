@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <style>
+        #tout {
+            background-image: url("bg.PNG");
+        }
+
+        #presentateur {
+            top: 270px;
+            left: 460px;
+            position: fixed;
+        }
+
+        #vie {
+            top: 160px;
+            right: 390px;
+            position: fixed;
+        }
+
+        #cisco {
+            width: 100px;
+            height: 100px;
+            bottom: 10px;
+            left: 10px;
+            position: fixed;
+        }
+    </style>
+    <title>CapyQuiz</title>
+
+    <link rel="icon" href="favicon.png" sizes="48px,48px"  >
+</head>
+<div>    <img height="1000px" width="1900px"  class="d-none" src="petitjuge.png" id="petit" alt=""></div>
+<body id="tout" class="bg-dark">
+
+    <img src="cisco.png" id="cisco" alt="">
+    <h1 class="mb-3 text-center fs-1  pt-3 color-text text-white">
+        <img src="logo.PNG" class="w-25" alt="">
+    </h1>
+    <h2 class="mb-5 text-center fs-4 color-text  text-white"><em>
+            Réponds aux questions et rends monsieur Mezille fier de toi !
+        </em></h2>
+    <div class="row">
+        <div class="col-6"></div>
+        <div class="col-3" id="presentateur">
+            <img height="300px" width="300px" class="rounded-circle pt-3 " src="capypresentateur.png">
+        </div>
+        <div class="col-4 mt-4">
+            <div id="debutmenu" class="color-text  text-white">
+                <button id="start" class="btn btn-success ml-5">Start</button>
+                Essaye d'avoir la formation cisco
+            </div>
+            <div class="card text-white bg-secondary">
+                <div id="questionnaire1" name="question" class="d-none">
+                    <div class="card-header">
+                        Qu'est ce qu'un réseau local virtuel informatique ?
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q1" class="btn btn-light">Un réseau de vm</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q2" class="btn btn-light">Réseau sur packet tracer</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q3" class="btn btn-light">VLAN(s)</a>
+                    </div>
+                </div>
+
+                <div id="questionnaire2" name="question" class="d-none">
+                    <div class="card-header">
+                        En JS pour appelé un/des élément(s) html par leur classe que mets-on devant ?
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q4" class="btn btn-light">"#exemple"</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q5" class="btn btn-light">".exemple"</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q6" class="btn btn-light">"span"</a>
+                    </div>
+                </div>
+
+                <div id="questionnaire3" name="question" class="d-none">
+                    <div class="card-header">
+                        Le projet Arpanet qui est le premier réseau de transfert de données a été lancé quelle année ?
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q7" class="btn btn-light">1966</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q8" class="btn btn-light">1969</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q9" class="btn btn-light">1972</a>
+                    </div>
+                </div>
+
+                <div id="questionnaire4" name="question" class="d-none">
+                    <div class="card-header">
+                        Qui a crée l'entreprise Cisco Systems ?
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q10" class="btn btn-light">Brendan Eich</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q11" class="btn btn-light">Tim Berners-Lee</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q12" class="btn btn-light">Sandra Lerner et son mari Leonard Bosack</a>
+                    </div>
+                </div>
+
+                <div id="questionnaire5" name="question" class="d-none">
+                    <div class="card-header">
+                        Quel batiments on été relié ensemble la première fois grace à Arpanet ?
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q13" class="btn btn-light">Des universités</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q14" class="btn btn-light">Des laboratoires</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q15" class="btn btn-light">Des entreprises dans le domaine pétrolier</a>
+                    </div>
+                </div>
+
+                <div id="questionnaire6" name="question" class="d-none">
+                    <div class="card-header">
+                        Le html est-il considéré comme un language de programmation ?
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q16" class="btn btn-light">Oui</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q17" class="btn btn-light">Non</a>
+                    </div>
+                </div>
+
+
+                <div id="questionnaire7" name="question" class="d-none">
+                    <div class="card-header">
+                        A quel couche intervient le routeur ?
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q18" class="btn btn-light">3</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q19" class="btn btn-light">4</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q20" class="btn btn-light">5</a>
+                    </div>
+                </div>
+
+
+                <div id="questionnaire8" name="question" class="d-none">
+                    <div class="card-header">
+                        Dans quel type de mémoire se stock la config quand on utilise la commande "copy running-config
+                        startup-config" ?
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q21" class="btn btn-light">NVRAM</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q22" class="btn btn-light">FLASH</a>
+                    </div>
+                    <div class="card-body mt-0">
+                        <a href="#" id="Q23" class="btn btn-light">RAM</a>
+                    </div>
+                </div>
+
+
+                <div class="card-footer alert alert-danger mt-3 text-center d-none" role="alert" id="alerte">
+                </div>
+                    <button id="restart" class="btn btn-danger  d-none">Restart</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-3"></div>
+    </div>
+
+
+
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/CapyQuiz.js"></script>
+</body>
+
+</html>
