@@ -1,4 +1,7 @@
-var questionpass = 0;
+$(document).ready( function(){
+    $("#petit").hide()
+})
+
 
 $(document).on("click","#start", function () {
 vivre();
@@ -32,7 +35,7 @@ function reussir1(){
     $("#questionnaire2").removeClass("d-none");
     $("#questionnaire1").addClass("d-none");
     $("#alerte").html("1/8 bonne reponse").removeClass("d-none alert-danger").addClass("alert-success").prepend('<img height="100px" width="100px" src="mezille.jpg" />');
-    questionpass += 1;
+    
 };
 
 $(document).on("click", "#Q2", function () {
@@ -58,7 +61,7 @@ function reussir2(){
     $("#questionnaire3").removeClass("d-none");
     $("#questionnaire2").addClass("d-none");
     $("#alerte").html("2/8 bonnes reponses").removeClass("d-none alert-danger").addClass("alert-success").prepend('<img height="100px" width="100px" src="mezille.jpg" />');
-    questionpass += 1;
+    
 };
 
 $(document).on("click", "#Q4", function () {
@@ -82,7 +85,7 @@ function reussir3(){
     $("#questionnaire4").removeClass("d-none");
     $("#questionnaire3").addClass("d-none");
     $("#alerte").html("3/8 bonnes reponses").removeClass("d-none alert-danger").addClass("alert-success").prepend('<img height="100px" width="100px" src="mezille.jpg" />');
-    questionpass += 1;
+    
 };
 
 $(document).on("click", "#Q8", function () {
@@ -107,7 +110,7 @@ function reussir4(){
     $("#questionnaire5").removeClass("d-none");
     $("#questionnaire4").addClass("d-none");
     $("#alerte").html("4/8 bonnes reponses").removeClass("d-none alert-danger").addClass("alert-success").prepend('<img height="100px" width="100px" src="mezille.jpg" />');
-    questionpass += 1;
+    
     console.log(questionpass)
 };
 
@@ -132,7 +135,7 @@ function reussir5(){
     $("#questionnaire6").removeClass("d-none");
     $("#questionnaire5").addClass("d-none");
     $("#alerte").html("5/8 bonnes reponses").removeClass("d-none alert-danger").addClass("alert-success").prepend('<img height="100px" width="100px" src="mezille.jpg" />');
-    questionpass += 1;
+    
 };
 
 $(document).on("click", "#Q13", function () {
@@ -156,7 +159,7 @@ function reussir6(){
     $("#questionnaire7").removeClass("d-none");
     $("#questionnaire6").addClass("d-none");
     $("#alerte").html("6/8 bonnes reponses").removeClass("d-none alert-danger").addClass("alert-success").prepend('<img height="100px" width="100px" src="mezille.jpg" />');
-    questionpass += 1;
+    
 };
 
 $(document).on("click", "#Q16", function () {
@@ -171,17 +174,23 @@ function echoue6(){
 
 
 $(document).on("click", "#Q18", function () {
-    $("#presentateur").addClass("d-none");
-    $("#petit").removeClass("d-none");
-    $("#presentateur").addClass("d-none")
-    reussir7();
+    $("#petit").show()
+    $("#presentateur").hide();
+    setTimeout(function() {
+
+        $("#petit").hide();
+        reussir7();
+    }, 700);
+
+
 })
 function reussir7(){
+    $("#presentateur").show();
     $("#questionnaire7").addClass("d-none");
 
     $("#questionnaire8").removeClass("d-none");
     $("#alerte").html("7/8 bonnes reponses").removeClass("d-none alert-danger").addClass("alert-success").prepend('<img height="100px" width="100px" src="mezille.jpg" />');
-    questionpass += 1;
+    
 };
 
 $(document).on("click", "#Q19", function () {
